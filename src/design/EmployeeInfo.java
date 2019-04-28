@@ -32,11 +32,10 @@ public class EmployeeInfo {
      * you must have multiple constructor.
      * Must implement below constructor.
      */
-    public EmployeeInfo(int employeeId) {
+    public EmployeeInfo(int employeeId){
 
     }
-
-    public EmployeeInfo(String name, int employeeId) {
+    public EmployeeInfo(String name, int employeeId){
 
     }
 
@@ -48,8 +47,8 @@ public class EmployeeInfo {
      * So you probably need to send 2 arguments.
      *
      */
-    public static int calculateEmployeeBonus(int numberOfYearsWithCompany) {
-        int total = 0;
+    public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
+        int total=0;
         return total;
     }
 
@@ -59,9 +58,9 @@ public class EmployeeInfo {
      * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
      *
      */
-    public static int calculateEmployeePension() {
-        int total = 0;
-        Scanner sc = new Scanner(System.in);
+    public static int calculateEmployeePension(){
+        int total=0;
+        Scanner sc  = new Scanner(System.in);
         System.out.println("Please enter start date in format (example: May,2015): ");
         String joiningDate = sc.nextLine();
         System.out.println("Please enter today's date in format (example: August,2017): ");
@@ -73,16 +72,14 @@ public class EmployeeInfo {
         //Calculate pension
 
 
+
         return total;
     }
-
     private static class DateConversion {
 
-        public DateConversion(Months months) {
-        }
-
+        public DateConversion(Months months){}
         public static String convertDate(String date) {
-            String[] extractMonth = date.split(",");
+            String [] extractMonth = date.split(",");
             String givenMonth = extractMonth[0];
             int monthDate = whichMonth(givenMonth);
             String actualDate = monthDate + "/" + extractMonth[1];

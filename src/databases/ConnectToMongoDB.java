@@ -12,6 +12,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConnectToMongoDB {
+    public class ConnectToMongo {
+        public  void main(String[] args) {
+
+            MongoClient clint = new MongoClient();
+
+            MongoDatabase cnt  = clint.getDatabase("Students");
+            System.out.println("Connection Established Successfully");
+
+
+            MongoCollection<Document>  dts=  cnt.getCollection("profile");
+
+        }
+    }
 
     public static MongoDatabase mongoDatabase = null;
 
